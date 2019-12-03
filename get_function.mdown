@@ -16,7 +16,88 @@ dictionary.get(key[, value])
 
 
 ```python
-
-
-
+party_list = {'name':'tom', 'age':'13'}
 ```
+
+### Simple enought, right? We created a dictionary named 'party_list' and assigned to it two keys (name and age) and corresponding
+### values for those keys (tom and 13).
+
+###Now lets use the *.get()* function to get a key that does not exist.
+
+```python
+party_list.get('color')
+```
+
+### *color* is not a key in our *party_list* dictionary, so we expect an error.
+
+### Now lets, use the *.get()* fuction to call an existing key.
+
+```python
+party_list.get('name')
+```
+
+### Awesome. Now, let's say that the *color* key we tried calling earlier was accidentally left off our
+### list of keys, and should be added. Using *.get()*'s *value* function will let us do just that. So, Tom's
+### favorite color happens to be blue.
+
+```python
+party_list.get('color','blue')
+
+print('Our guest' + party_list.get('name') + 'is' + party_list.get('age') + 'years old and loves the color' + party_list.get('color'))
+```
+
+### Awesome, now let's take our use of the *.get()* fuction up a level with our next example.
+### In the world of data science you often want to know know the frequency at which something occurs/exists/happens etc.
+### As an example lets look at a string of 13 characters. Go ahead and assign that string to a variable
+
+```python
+my_string = 'aabbbcaadefgh'
+```
+### Sure, you can quickly tell me the frequency of each character because there are only 13 of them. Could you
+### you quickly give me the frequency of 1,000 characters? Probably not. This is where the *.get()* function
+### really comes through for the save. But we'll keep the task simple by using our little string above.
+
+### Lets define a function named *frequency* that returns the frequency of each character in *my_string*.
+### Intuitively, the function *frequency* will eventually receive *my_string* as an input argument, but
+### lets just place *argument* there for now.
+
+```python
+def frequency(argument):
+```
+
+### Next, we want to define an empty dictionary called......you guessed it....*freqs*. 
+### So far this is what we have.
+
+```python
+def frequency(argument):
+	freqs = {}
+```
+
+### Next, lets create a for-loop that will iterate through each of the 13 characters in *my_string*
+### and add the character to the *freqs* dictionary by assigning the character as a key. Notice, that 
+### the *.get()* is then used to 1) determine if the character already exists and, if so, add one to its
+### frequency and 2) Assign a frequency value of zero to the character if it does not already exist in the 
+### dictionary. And finally, we return the dictionary.
+	
+```python
+def frequency(argument):
+	freqs = {}
+	for chr in argument:
+		freqs[chr]=freqs.get(chr,0) + 1
+	return freqs
+	
+```
+
+### Now let's call our frequency function using *my_string* as the argument.
+
+```python
+frequency(my_string)
+```
+
+### And there you have it. A very simple function that can make a possibly tedious task quite simple.
+
+### Thanks for reading.
+
+
+
+
