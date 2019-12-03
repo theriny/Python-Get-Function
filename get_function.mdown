@@ -1,0 +1,22 @@
+#Get Familiar with .get()
+
+
+### I often come across really helpful python functions while digging through new code. Recently, I found the .get() function which seems to be used primarily with Python dictionaries.
+### The .get() function basically returns the value of a dictionary key if the key is already in the dictionary.
+### The .get() function is pretty simple , taking a maximum of 2 arguments.
+
+```python
+dictionary.get(key[, value])
+```
+
+> argument 1: key
+> argument 2 (optional): value
+
+### The 'key' argument is fairly straight-forward. Lets create a simple dictionary and try it out.
+
+
+```python
+
+
+
+```
