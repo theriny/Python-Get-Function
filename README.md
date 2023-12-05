@@ -1,3 +1,3 @@
-# Python Tools
+# Python's Get Function
 
-# A blog of sorts where I document Python coding tools that I find interesting and useful.
+A couple of interesting use cases for Python's 'get' function. Check out the markdown file!
